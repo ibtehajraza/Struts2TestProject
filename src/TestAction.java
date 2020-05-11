@@ -3,12 +3,16 @@ public class TestAction {
 
 	private String message;
 	
+	String firstName;
+	
+
 	public String execute() {
 		
 		System.out.println("Execute() Method is called");
 		
-		message = "ERROR:: Message";
-		return "error";
+		message = "SUCCESS: Message, Name: " + firstName;
+		System.out.println("Name: "+firstName);
+		return "success";
 	}
 
 	public String getMessage() {
@@ -19,5 +23,13 @@ public class TestAction {
 		this.message = message;
 	}
 	
+	public String getFirstName() {
+		return firstName;
+	}
+
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+
 	
 }
